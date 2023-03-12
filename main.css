@@ -1,0 +1,502 @@
+body {margin:0;font-family:Arial}
+
+.TitleNavBar {
+  overflow: hidden;
+  background-color: rgb(55, 179, 158);
+  /* padding-top: 0.2rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0rem; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.TitleNavBar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.TitleNavBar .icon {
+  display: none;
+}
+
+.currency {
+  float: left;
+  overflow: hidden;
+}
+
+.currency .currency-btn {
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 14px;
+}
+
+.currency-content {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  min-width: 10px;
+  font-size: 0.75rem;
+  z-index: 1;
+}
+
+.currency-content button {
+  float: none;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(55, 179, 158);
+  font-family: Arial;
+  font-size: 0.75rem;
+  display: block;
+  text-align: center;
+  min-width: 70px;
+  font-size: 0.75rem;
+  z-index: 1;
+  border-color: white;
+  border-style: solid;
+  border-width: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 14px;
+}
+
+ .currency:hover .currency-btn {
+  background-color: white;
+  color: black;
+}
+
+.currency-content button:hover {
+  background-color: white;
+  color: black;
+}
+
+.currency:hover .currency-content {
+  display: block;
+}
+
+.TitleNavBar h2 {
+    text-align: center;
+    color: white;
+    font-family: 'hexarounded', sans-serif;
+    flex-basis: 49%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.8rem;
+    font-size: 1.5rem;
+    margin-left: 20%;
+    margin-right: 13%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.TitleNavBar a#sign {
+    display: block;
+    color: white;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 13px 5px;
+    text-decoration: none;
+    float: right;
+}
+
+.TitleNavBar a#create {
+    display: block;
+    color: white;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 13px 5px;
+    text-decoration: none;
+    float: right;
+}
+
+.TitleNavBar p#dash {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.75rem;
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 13px 0px;
+    position: relative;
+}
+
+.TitleNavBar a:hover#sign {
+    background-color: #ddd;
+    color: black;
+}
+
+.TitleNavBar a:hover#create {
+    background-color: #ddd;
+    color: black;
+}
+
+.NavBar {
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    padding-left: 3rem;
+    font-size: 15px;
+    height: 53px;
+    /* padding-top: 0.2rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0rem; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+  
+.NavBar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 15px;
+}
+  
+.NavBar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.NavBarIcon {
+    margin-left: 500px;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 13px 20px;
+    text-decoration: none;
+}
+
+.NavBarIcon button {
+    border-color: black;
+    border-style: solid;
+    background-color: white;
+    border-width: thin;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.firstScroller {
+  max-height: 450px;
+}
+
+.firstScroller img {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    margin: auto;
+    object-fit: cover;
+}
+
+.dotNav {
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  bottom: 20px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.dot {
+  cursor: pointer;
+  height: 7px;
+  width: 7px;
+  margin: 0 1px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 50%;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-delay: 10s;
+}
+
+@keyframes fade {
+  from {opacity: 1.0}
+  to   {opacity: 0.0}
+}
+
+.data_preview_area {
+  overflow-x:auto;
+  overflow-y: visible;
+  white-space:nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.data_preview_frame {
+  width:calc(100% / 4);
+  display:inline-block;
+  vertical-align: super;
+}
+
+.data_preview_content {
+  height:250px;
+  margin: 30px 30px 0px 10px;
+}
+
+.data_preview_content img {
+  height: 100%;
+  width: 100%;
+}
+
+.data_preview_content p {
+  color: black;
+  background-color: white;
+  font-size: 17.5px;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 2px;
+  padding: 5px 10px;
+  margin: 0 0;
+  /* left: 7.5%; */
+  transform: translate(25%, 0%);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: fit-content;
+  bottom: 20px;
+}
+
+.preview_control_area {
+  position:relative;
+  background-color: #fff;
+  max-height: 300px;
+  margin-bottom: 80px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.previous_button {
+  position:absolute;
+  top:60%;
+  left:0;
+  transform:translateY(-50%);
+}
+
+.next_button {
+  position:absolute;
+  top:60%;
+  right:0;
+  transform:translateY(-50%);
+}
+
+.control_button {
+  cursor: pointer;
+  font-size: 40px;
+  border-style: none;
+  padding: 0 0;
+  margin: 0 0;
+  background-color: transparent;
+}
+
+.control_button:hover {
+  color: black;
+  font-size: 60px;
+  transition:0.2s;
+}
+
+.data_preview_area::-webkit-scrollbar {
+  display: none;
+}
+
+.PageContent hr {
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.feature_products_title {
+  color: black;
+  font-family: 'hexarounded', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.product_control_area {
+  position:relative;
+  background-color: #fff;
+  /* height: 500px; */
+  margin-bottom: 80px;
+}
+
+.product_control_area .previous_button {
+  position:absolute;
+  top:40%;
+  left:0;
+  transform:translateY(-50%);
+}
+
+.product_control_area .next_button {
+  position:absolute;
+  top:40%;
+  right:0;
+  transform:translateY(-50%);
+}
+
+.product_control_area .data_preview_area {
+  overflow-x:auto;
+  overflow-y: visible;
+  white-space:nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 450px;
+}
+
+.product_control_area .data_preview_area::-webkit-scrollbar {
+  display: none;
+}
+
+.product_preview_frame {
+  width:calc(100% / 4);
+  display:inline-block;
+  vertical-align: super;
+}
+
+.product_preview_content {
+  height:250px;
+  margin: 30px 30px 0px 10px;
+}
+
+.product_preview_content img {
+  height: 100%;
+  width: 100%;
+}
+
+.product_preview_content p.cart {
+  color: black;
+  background-color: white;
+  font-size: 17.5px;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 2px;
+  padding: 5px 10px;
+  margin: 10px 0px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  transform: translate(82.5%, 0%);
+}
+
+.product_preview_content button.cart {
+  color: black;
+  background-color: white;
+  font-size: 17.5px;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 2px;
+  padding: 5px 10px;
+  margin: 10px 0px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  transform: translate(82.5%, 0%);
+}
+
+.product_preview_content p.product_name {
+  color: black;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 17.5px;
+  border-style: none;
+  padding: 5px 0px;
+  margin: 0 0;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 5px;
+}
+.stars i {
+  color: #e6e6e6;
+  font-size: 10px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.stars i.active {
+  color: #ff9c1a;
+  padding: 0 0;
+  box-shadow: none;
+}
+
+.price {
+  margin: 0% 0% 0% 35%;
+  padding: 0%;
+  border: 0%;
+}
+
+.old_price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 12.5px;
+  position: relative;
+  padding-right: 5px;
+  margin: 10px 0 0 0;
+  text-decoration: line-through;
+}
+
+.new_price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-size: 17.5px;
+  position: relative;
+  margin: 10px 0 0 0;
+}
